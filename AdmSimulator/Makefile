@@ -1,11 +1,11 @@
 CXX=g++
-CXXFLAGS =	-O3 -g -Wall -fmessage-length=0
+CXXFLAGS =	-O2 -g -Wall
 
 SRCS = Segment.cpp Chrom.cpp ChromPair.cpp Population.cpp GeneralModel.cpp AdmSimulator.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-LIBS =
+LIBS = 
 
 TARGET = AdmSimulator
 
