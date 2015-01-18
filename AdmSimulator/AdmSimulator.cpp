@@ -13,7 +13,6 @@
 #include <map>
 #include <vector>
 #include "GeneralModel.h"
-#include "generator.h"
 
 using namespace std;
 
