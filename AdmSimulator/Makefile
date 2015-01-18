@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS =	-O2 -g -Wall -std=c++11
+CXXFLAGS =	-O2 -g -Wall
 
 SRCS = Segment.cpp Chrom.cpp ChromPair.cpp Population.cpp GeneralModel.cpp AdmSimulator.cpp
 

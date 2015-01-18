@@ -160,7 +160,7 @@ void GeneralModel::readParam(const std::string & file, int gen, int nanc) {
     std::string line;
     while(getline(fin, line)){
         //pure comments
-        if (line.size() > 0 && line.front()=='#') {
+        if (line.size() > 0 && line.at(0)=='#') {
             continue;
         }
         //remove comments
