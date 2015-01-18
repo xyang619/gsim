@@ -143,7 +143,7 @@ int main(int argc, char **argv) {
 		}
 	}
 	hfin.close();
-	//prepare output, same as MS output
+	//prepare output
 	string segfile = string(output) + ".seg";
 	string hapfile = string(output) + ".hap";
 	ofstream segout(segfile.c_str());
@@ -156,23 +156,23 @@ int main(int argc, char **argv) {
 	for (int i = 0; i < nsample; ++i) {
 		ChromPair cp = sample.at(i);
 		for (int j = 1; j < 3; ++j) {
-			Chrom chr = cp.getChrom(i);
+			Chrom chr = cp.getChrom(j);
 			int nseg = chr.getNumSegments();
 			string outStr = "";
-			for (int j = 0; j < nseg; ++j){
-				Segment seg = chr.getSegment(j);
+			for (int k = 0; k < nseg; ++k){
+				Segment seg = chr.getSegment(k);
 				int key = seg.getLabel() / 10000;
 				int index = seg.getLabel() % 10000;
-				int start = seg.getStart();
-				int end = seg.getEnd();
-				outStr = outStr + copySeq(poss, anchaps.at(key).at(index), start, end);
+				double start = seg.getStart();
+				double end = seg.getEnd();
+                outStr = outStr + copySeq(poss, anchaps.at(key).at(index), start, end);
 			}
 			hapout << outStr << endl;
 
 			chr.smooth();
 			nseg = chr.getNumSegments();
-			for (int j = 0; j < nseg; ++j) {
-				Segment seg = chr.getSegment(j);
+			for (int k = 0; k < nseg; ++k) {
+				Segment seg = chr.getSegment(k);
 				double start, end;
 				int label;
 				start = seg.getStart();
