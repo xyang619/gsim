@@ -12,7 +12,6 @@
 		6FE3B4861A6B825A007355F2 /* Chrom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B4751A6B8259007355F2 /* Chrom.cpp */; };
 		6FE3B4881A6B825A007355F2 /* ChromPair.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B4781A6B8259007355F2 /* ChromPair.cpp */; };
 		6FE3B48A1A6B825A007355F2 /* GeneralModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B47B1A6B8259007355F2 /* GeneralModel.cpp */; };
-		6FE3B48C1A6B825A007355F2 /* generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B47E1A6B825A007355F2 /* generator.cpp */; };
 		6FE3B48E1A6B825A007355F2 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B4811A6B825A007355F2 /* Makefile */; };
 		6FE3B48F1A6B825A007355F2 /* Population.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B4821A6B825A007355F2 /* Population.cpp */; };
 /* End PBXBuildFile section */
@@ -40,8 +39,6 @@
 		6FE3B4791A6B8259007355F2 /* ChromPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromPair.h; sourceTree = "<group>"; };
 		6FE3B47B1A6B8259007355F2 /* GeneralModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeneralModel.cpp; sourceTree = "<group>"; };
 		6FE3B47C1A6B8259007355F2 /* GeneralModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralModel.h; sourceTree = "<group>"; };
-		6FE3B47E1A6B825A007355F2 /* generator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = generator.cpp; sourceTree = "<group>"; };
-		6FE3B47F1A6B825A007355F2 /* generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generator.h; sourceTree = "<group>"; };
 		6FE3B4811A6B825A007355F2 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		6FE3B4821A6B825A007355F2 /* Population.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Population.cpp; sourceTree = "<group>"; };
 		6FE3B4831A6B825A007355F2 /* Population.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Population.h; sourceTree = "<group>"; };
@@ -85,8 +82,6 @@
 				6FE3B4791A6B8259007355F2 /* ChromPair.h */,
 				6FE3B47B1A6B8259007355F2 /* GeneralModel.cpp */,
 				6FE3B47C1A6B8259007355F2 /* GeneralModel.h */,
-				6FE3B47E1A6B825A007355F2 /* generator.cpp */,
-				6FE3B47F1A6B825A007355F2 /* generator.h */,
 				6FE3B4811A6B825A007355F2 /* Makefile */,
 				6FE3B4821A6B825A007355F2 /* Population.cpp */,
 				6FE3B4831A6B825A007355F2 /* Population.h */,
@@ -158,7 +153,6 @@
 				6FE3B4711A6A7F70007355F2 /* Segment.cpp in Sources */,
 				6FE3B4881A6B825A007355F2 /* ChromPair.cpp in Sources */,
 				6FE3B48E1A6B825A007355F2 /* Makefile in Sources */,
-				6FE3B48C1A6B825A007355F2 /* generator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
