@@ -209,7 +209,7 @@ int findPos(const vector<double> & poss, double pos) {
 	int right = static_cast<int>(poss.size());
 	if (pos <= poss.front())
 		return left;
-	if (pos > poss.back())
+	if (pos >= poss.back())
 		return right;
 	int mid = (left + right + 1) / 2;
 	while (left < right) {
@@ -219,7 +219,7 @@ int findPos(const vector<double> & poss, double pos) {
 			right = mid - 1;
 		mid = (left + right + 1) / 2;
 	}
-	return left;
+	return left + 1;
 }
 
 string copySeq(const vector<double> & poss, const string & seq, double start, double end) {
