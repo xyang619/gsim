@@ -13,10 +13,11 @@
 #include <map>
 #include <vector>
 #include "GeneralModel.h"
+#include "AncEvolve.h"
 
 using namespace std;
 
-static const string version = "1.0.0";
+static const string version = "1.0.1";
 
 void help();
 int findPos(const vector<double> & poss, double pos);
@@ -38,6 +39,7 @@ int main(int argc, char **argv) {
     int nsample = 10;
     unsigned seed = 0;
     bool givenSeed = 0;
+    bool combine = 0;
 	double len = 1.0;
 	string file = "";
 	string prefix = "";
@@ -48,6 +50,8 @@ int main(int argc, char **argv) {
 		if (arg == "-h" || arg == "--help") {
 			help();
 			exit(0);
+        } else if (arg == "-c" || arg == "--comb") {
+            combine = 1;
 		} else if (arg == "-f" || arg == "--file") {
 			file = string(argv[++i]);
 		} else if (arg == "-g" || arg == "--gen") {
@@ -88,13 +92,14 @@ int main(int argc, char **argv) {
 	cerr << "========================================================" << endl;
 	cerr << "Arguments summary:" << endl;
 	cerr << "generation: " << gen << endl;
-	cerr << "number of ancestral populations: " << nanc << endl;
+	cerr << "number of ancestral: " << nanc << endl;
 	cerr << "chromosome length: " << len << endl;
 	cerr << "number of samples: " << nsample << endl;
 	cerr << "model file: " << file << endl;
 	cerr << "input file: " << prefix << ".hap " << prefix << ".map" << endl;
 	cerr << "output prefix: " << output << endl;
 	cerr << "random seed: " << seed << endl;
+    cerr << "combine ancestral: " << (combine ? "YES": "NO") << endl;
 	cerr << "========================================================" << endl;
 
 	GeneralModel gm(file, gen, nanc);
@@ -152,6 +157,28 @@ int main(int argc, char **argv) {
 		cerr << "Can't open file " << segfile << " or " << hapfile << endl;
 		abort();
 	}
+    
+    if (combine){
+        for (int i = 1; i <= nanc; ++i) {
+            double ancN = gm.getNhaps()[i-1];
+            AncPop ancp(ancN, len);
+            ancp.evolve(gen);
+            vector<Chrom> haps = ancp.getHaplos();
+            for (size_t j = 0; j < haps.size(); ++j) {
+                string ancStr = "";
+                Chrom chr = haps.at(j);
+                for (int k = 0; k < chr.getNumSegments() ; ++k) {
+                    Segment seg = chr.getSegment(k);
+                    double start = seg.getStart();
+                    double end = seg.getEnd();
+                    int label = seg.getLabel();
+                    ancStr += copySeq(poss, anchaps.at(i).at(label), start, end);
+                }
+                hapout << ancStr << endl;
+            }
+        }
+    }
+    
 	//cout << "//admixed haplotypes" << endl;
 	for (int i = 0; i < nsample; ++i) {
 		ChromPair cp = sample.at(i);
@@ -191,8 +218,10 @@ void help() {
     cout << "====================================================================================" << endl;
     cout << "AdmSimulator v" << version << endl;
 	cout << "Description: A forward time simulator for generalized model" << endl;
+    cout << "Options:" << endl;
+    cout << "	-h/--help	print help message" << endl;
+    cout << "	-c/--comb	combine recombined ancestral haplotypes in output file" << endl;
 	cout << "Arguments:" << endl;
-	cout << "	-h/--help	print help message[optional]" << endl;
 	cout << "	-f/--file	model description file [required]" << endl;
     cout << "	-i/--input	prefix of input file [required]" << endl;
 	cout << "	-g/--gen	generation since admixture [optional, default=1]" << endl;

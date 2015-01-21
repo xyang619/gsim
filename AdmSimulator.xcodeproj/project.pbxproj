@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F083C171A6E72EF006096BF /* AncEvolve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F083C151A6E72EF006096BF /* AncEvolve.cpp */; };
 		6FE3B4691A6A7F2E007355F2 /* AdmSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B4681A6A7F2E007355F2 /* AdmSimulator.cpp */; };
 		6FE3B4711A6A7F70007355F2 /* Segment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B46F1A6A7F70007355F2 /* Segment.cpp */; };
 		6FE3B4861A6B825A007355F2 /* Chrom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE3B4751A6B8259007355F2 /* Chrom.cpp */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F083C151A6E72EF006096BF /* AncEvolve.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AncEvolve.cpp; sourceTree = "<group>"; };
+		6F083C161A6E72EF006096BF /* AncEvolve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AncEvolve.h; sourceTree = "<group>"; };
 		6FE3B4651A6A7F2E007355F2 /* AdmSimulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdmSimulator; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE3B4681A6A7F2E007355F2 /* AdmSimulator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AdmSimulator.cpp; sourceTree = "<group>"; };
 		6FE3B46F1A6A7F70007355F2 /* Segment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Segment.cpp; sourceTree = "<group>"; };
@@ -74,16 +77,18 @@
 		6FE3B4671A6A7F2E007355F2 /* AdmSimulator */ = {
 			isa = PBXGroup;
 			children = (
-				6FE3B4681A6A7F2E007355F2 /* AdmSimulator.cpp */,
-				6FE3B46F1A6A7F70007355F2 /* Segment.cpp */,
-				6FE3B4751A6B8259007355F2 /* Chrom.cpp */,
-				6FE3B4761A6B8259007355F2 /* Chrom.h */,
-				6FE3B4781A6B8259007355F2 /* ChromPair.cpp */,
-				6FE3B4791A6B8259007355F2 /* ChromPair.h */,
-				6FE3B47B1A6B8259007355F2 /* GeneralModel.cpp */,
-				6FE3B47C1A6B8259007355F2 /* GeneralModel.h */,
 				6FE3B4811A6B825A007355F2 /* Makefile */,
+				6FE3B4681A6A7F2E007355F2 /* AdmSimulator.cpp */,
+				6F083C151A6E72EF006096BF /* AncEvolve.cpp */,
+				6F083C161A6E72EF006096BF /* AncEvolve.h */,
+				6FE3B4751A6B8259007355F2 /* Chrom.cpp */,
+				6FE3B4781A6B8259007355F2 /* ChromPair.cpp */,
+				6FE3B47B1A6B8259007355F2 /* GeneralModel.cpp */,
 				6FE3B4821A6B825A007355F2 /* Population.cpp */,
+				6FE3B46F1A6A7F70007355F2 /* Segment.cpp */,
+				6FE3B4761A6B8259007355F2 /* Chrom.h */,
+				6FE3B4791A6B8259007355F2 /* ChromPair.h */,
+				6FE3B47C1A6B8259007355F2 /* GeneralModel.h */,
 				6FE3B4831A6B825A007355F2 /* Population.h */,
 				6FE3B4701A6A7F70007355F2 /* Segment.h */,
 			);
@@ -147,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FE3B4691A6A7F2E007355F2 /* AdmSimulator.cpp in Sources */,
+				6F083C171A6E72EF006096BF /* AncEvolve.cpp in Sources */,
 				6FE3B4861A6B825A007355F2 /* Chrom.cpp in Sources */,
 				6FE3B48F1A6B825A007355F2 /* Population.cpp in Sources */,
 				6FE3B48A1A6B825A007355F2 /* GeneralModel.cpp in Sources */,

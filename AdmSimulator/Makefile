@@ -1,7 +1,7 @@
 CXX=g++
 CXXFLAGS =	-O2 -g -Wall
 
-SRCS = Segment.cpp Chrom.cpp ChromPair.cpp Population.cpp GeneralModel.cpp AdmSimulator.cpp
+SRCS = Segment.cpp Chrom.cpp ChromPair.cpp Population.cpp GeneralModel.cpp AncEvolve.cpp AdmSimulator.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
